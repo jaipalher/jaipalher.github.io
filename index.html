@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Historia de la Inteligencia Artificial</title>
+
+<style>
+/* =========================
+   ESTILOS GENERALES
+========================= */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(120deg, #1e1e2f, #2a2a40);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    padding: 30px 10px;
+    color: #00eaff;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* Línea central animada */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #00eaff;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 0;
+    transition: height 1.3s ease-out;
+    z-index: 1;
+}
+
+.timeline.animate::after {
+    height: 100%;
+}
+
+/* =========================
+   EVENTOS
+========================= */
+.event {
+    position: relative;
+    width: 50%;
+    padding: 20px 30px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.7s ease;
+}
+
+.event.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Posicionamiento */
+.left {
+    left: 0;
+    padding-right: 60px;
+}
+
+.right {
+    left: 50%;
+    padding-left: 60px;
+}
+
+/* Entrada lateral */
+.left.show {
+    transform: translateX(-20px);
+}
+
+.right.show {
+    transform: translateX(20px);
+}
+
+/* Punto central */
+.event::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #00eaff;
+    border-radius: 50%;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+.card {
+    background-color: #2f2f4f;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 3;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(0, 234, 255, 0.6);
+}
+
+.card h2 {
+    color: #00eaff;
+}
+
+/* Listas */
+ul {
+    padding-left: 20px;
+}
+
+/* =========================
+   CONCLUSIÓN
+========================= */
+.conclusion {
+    max-width: 800px;
+    margin: 60px auto;
+    background-color: #1c1c33;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 20px;
+    }
+
+    .event {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 20px;
+    }
+
+    .left, .right {
+        left: 0;
+    }
+
+    .event::before {
+        left: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1>📜 Historia de la Inteligencia Artificial</h1>
+
+<div class="timeline">
+
+    <div class="event left">
+        <div class="card">
+            <h2>1943 – El origen</h2>
+            <p><strong>¿Qué pasó?</strong> McCulloch y Pitts crearon el primer modelo de neurona artificial.</p>
+            <p><strong>Desarrollo:</strong> Intentaron imitar el cerebro con matemáticas.</p>
+            <p><strong>Problemas:</strong> Ordenadores muy lentos.</p>
+            <p><strong>Solución:</strong> Dejaron la idea clave de imitar al cerebro.</p>
+            <p><strong>Personas:</strong> McCulloch, Pitts</p>
+        </div>
+    </div>
+
+    <div class="event right">
+        <div class="card">
+            <h2>1950 – ¿Pueden pensar las máquinas?</h2>
+            <p><strong>¿Qué pasó?</strong> Alan Turing propuso el Test de Turing.</p>
+            <p><strong>Cómo funciona:</strong> Si no sabes si hablas con un humano, la máquina pasa la prueba.</p>
+            <p><strong>Problema:</strong> No podían conversar bien.</p>
+            <p><strong>Persona clave:</strong> Alan Turing</p>
+        </div>
+    </div>
+
+    <div class="event left">
+        <div class="card">
+            <h2>1956 – Nace la IA</h2>
+            <p><strong>¿Qué pasó?</strong> Se usa el término “Inteligencia Artificial” por primera vez.</p>
+            <p><strong>Problema:</strong> Demasiado optimismo.</p>
+            <p><strong>Resultado:</strong> Nace una nueva ciencia.</p>
+            <p><strong>Personas:</strong> McCarthy, Minsky</p>
+        </div>
+    </div>
+
+    <div class="event right">
+        <div class="card">
+            <h2>Años 60 – Primeros programas</h2>
+            <p>Jugaban al ajedrez y resolvían problemas simples.</p>
+            <p><strong>Cómo:</strong> Reglas escritas por humanos.</p>
+            <p><strong>Problema:</strong> Muy limitados.</p>
+        </div>
+    </div>
+
+    <div class="event left">
+        <div class="card">
+            <h2>Años 70 – Invierno de la IA ❄️</h2>
+            <p>Se corta la financiación.</p>
+            <ul>
+                <li>Ordenadores débiles</li>
+                <li>Programas simples</li>
+            </ul>
+            <p><strong>Lección:</strong> Se necesitan datos y potencia.</p>
+        </div>
+    </div>
+
+    <div class="event right">
+        <div class="card">
+            <h2>Años 80 – Sistemas expertos</h2>
+            <p>Imitaban a médicos o ingenieros.</p>
+            <p><strong>Problemas:</strong> No aprendían solos.</p>
+        </div>
+    </div>
+
+    <div class="event left">
+        <div class="card">
+            <h2>Años 90 – Machine Learning</h2>
+            <p>Las máquinas aprenden con ejemplos.</p>
+            <p><strong>Ejemplo:</strong> Reconocer perros en fotos.</p>
+        </div>
+    </div>
+
+    <div class="event right">
+        <div class="card">
+            <h2>1997 – Deep Blue ♟️</h2>
+            <p>Vence al campeón de ajedrez.</p>
+            <p><strong>Cómo:</strong> Millones de cálculos.</p>
+        </div>
+    </div>
+
+    <div class="event left">
+        <div class="card">
+            <h2>Años 2000 – Internet</h2>
+            <p>Muchísimos datos para entrenar IA.</p>
+            <p>Mejoran buscadores y traductores.</p>
+        </div>
+    </div>
+
+    <div class="event right">
+        <div class="card">
+            <h2>2012 – Deep Learning</h2>
+            <p>Reconocimiento de voz e imágenes.</p>
+            <p><strong>Solución:</strong> GPUs y superordenadores.</p>
+        </div>
+    </div>
+
+    <div class="event left">
+        <div class="card">
+            <h2>2016 – AlphaGo</h2>
+            <p>Vence al campeón mundial de Go.</p>
+            <p><strong>Empresa:</strong> DeepMind</p>
+        </div>
+    </div>
+
+    <div class="event right">
+        <div class="card">
+            <h2>Actualidad – IA generativa</h2>
+            <ul>
+                <li>Escribe textos</li>
+                <li>Crea imágenes</li>
+                <li>Ayuda en medicina</li>
+            </ul>
+            <p><strong>Reto:</strong> Uso ético y responsable.</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="conclusion">
+    <h2>🧠 Conclusión</h2>
+    <ul>
+        <li>No apareció de golpe</li>
+        <li>Tuvo éxitos y fracasos</li>
+        <li>Depende de los humanos</li>
+        <li>Es una herramienta, no una persona</li>
+    </ul>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const events = document.querySelectorAll(".event");
+    const timeline = document.querySelector(".timeline");
+
+    const observer = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+
+    events.forEach(event => observer.observe(event));
+
+    const lineObserver = new IntersectionObserver(
+        entries => {
+            if (entries[0].isIntersecting) {
+                timeline.classList.add("animate");
+            }
+        },
+        { threshold: 0.1 }
+    );
+
+    lineObserver.observe(timeline);
+});
+</script>
+
+</body>
+</html>
